@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import os
-
-app = Flask(__name__, static_folder='static')
+app = Flask(__name__)
+app.secret_key = 'rewqurieru23ew'
 
 @app.route("/")
 def index():
@@ -14,3 +14,6 @@ def courses():
 @app.route("/tutorspage")
 def tutorspage():
     return render_template("tutorspage.html")
+
+if __name__ == "__main__":
+    app.run(debug=True)

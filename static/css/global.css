@@ -1,0 +1,29 @@
+* {
+  background-color: #f7fff6;
+}
+.nav {
+  width: 120%;
+  height: 180px;
+  background-color: #000000;
+  position: fixed;
+  z-index: 1;
+  font-size: 40px;
+  color: white;
+  top: 0;
+  left: -1px;
+}
+
+ul,
+li,
+a {
+  background-color: black;
+  display: flex;
+  flex-direction: horizontal;
+  margin-left: 30px;
+  color: white;
+  font-family: comfortaa;
+}
+
+a {
+  text-decoration: none;
+}

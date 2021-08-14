@@ -1,25 +1,22 @@
-* {
-  background-color: #f7fff6;
-}
 .nav {
   width: 120%;
-  height: 180px;
+  height: 120px;
   background-color: #000000;
   position: fixed;
-  z-index: 1;
-  font-size: 40px;
+  font-size: 30px;
   color: white;
   top: 0;
   left: -1px;
+  display: flex;
+  align-items: center;
 }
 
 ul,
 li,
 a {
-  background-color: black;
   display: flex;
   flex-direction: horizontal;
-  margin-left: 30px;
+  margin-left: 20px;
   color: white;
   font-family: comfortaa;
 }

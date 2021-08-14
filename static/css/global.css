@@ -1,14 +1,23 @@
 .nav {
+  background-color: #000000;
   width: 120%;
   height: 120px;
-  background-color: #000000;
   position: fixed;
+  top: -5px;
+  left: -10px;
+}
+.nav-left {
   font-size: 30px;
   color: white;
-  top: 0;
-  left: -1px;
   display: flex;
   align-items: center;
+}
+img {
+  padding-left: 20px;
+}
+
+body {
+  background-color: #f7fff6;
 }
 
 ul,

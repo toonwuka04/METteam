@@ -256,16 +256,30 @@
     <div class="container-fluid search-bar-bg">
         <div class="search-box">
             <div class="col-lg-10">
-                <input type="search" class="form-control search-bar" placeholder="search your question on the internet">
+                <form action="" method="post" id='form'>
+                    <input type="search" class="form-control search-bar" id="searchbar" placeholder="search your question on the internet">
+                  </form>
             </div>
             <div class="col-lg-2">
-                <select class="form-select form-select-lg mb-3 selectpicker">
-                    <option selected>search engine: </option>
-                    <option value="1">Google</option>
-                    <option value="2">Bing</option>
-                    <option value="3">Yahoo</option>
+                <select class="form-select form-select-lg mb-3 selectpicker" id='searchengine'>
+                    <option value="google">Google</option>
+                    <option value="bing">Bing</option>
+                    <option value="yahoo">Yahoo</option>
                 </select>
             </div>
+            
+            <script>
+                const form = document.getElementById('form');
+                const text = document.getElementById("searchbar");
+                const engine = document.getElementById('searchengine');
+                
+                function search(event) {
+                  event.preventDefault();
+                  const url = "https://www." + engine.value + ".com/search?q=" + text.value;
+                  const win = window.open(url, '_blank');
+                }
+                form.addEventListener('submit', search);
+              </script>
         </div>
     </div>
     <br>

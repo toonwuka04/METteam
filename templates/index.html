@@ -1,41 +1,638 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/png" href="static/img/METlogo.svg" />
-    <link rel="stylesheet" href="static/css/global.css" />
-    <link rel="stylesheet" href="static/css/index.css" />
+
+<head>
+    <title>Bootstrap Theme The Band</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/static/img/METlogo.png">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;600;700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
-  </head>
-  <body>
-    <div class="nav">
-        <div class="nav-left">
-        <a href="/"><img src="static/img/METlogo.png" alt="logo" /></a>
-        <ul>
-            <li>
-                <a href="/">Home<a/>
-            </li>
-            <li>
-                <a href="/courses">Courses<a/>
-            </li>
-            <li>
-                <a href="/tutorspage">Tutors<a/>
-            </li>
-        </ul>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            padding-top: 60px;
+        }
+
+        .container {
+            padding: 80px, 120px;
+        }
+
+        .container-fluid-title {
+            padding-top: 5%;
+            padding-bottom: 5%;
+        }
+        .container-fluid-spec {
+            padding-top: 2%;
+            padding-bottom: 2%;
+        }
+        .container-fluid-spec2 {
+            padding-top: 1%;
+            padding-bottom: 3%;
+        }
+        .title {
+            color: #fff;
+            background-color: #174D3E;
+        }
+
+        .tutor {
+            padding-top: 2%;
+            padding-bottom: 5%;
+        }
+
+        .person {
+            border: 10px solid transparent;
+            margin-bottom: 25px;
+        }
+
+        .person:hover {
+            border-color: #f1f1f1;
+        }
+
+        .navbar {
+            background-color: #000000;
+            letter-spacing: 4px;
+        }
+
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #d5d5d5 !important;
+        }
+
+        .navbar-nav li a:hover {
+            color: #7DA588 !important
+        }
+
+        .panel-heading {
+            color: #fff !important;
+            background-color: #7DA588 !important;
+        }
+
+        .panel-footer {
+            background-color: #fff;
+        }
+
+        .panel-footer .btn {
+            color: #fff;
+            background-color: #7DA588;
+        }
+
+        .design_bg {
+            background: #174D3E;
+            color: #fff;
+        }
+
+        .take-bg {
+            background: #F7FFF6;
+        }
+
+        .selectpicker {
+            font-size: 50px !important;
+        }
+
+        .panel-question {
+            background-color: #B8D2BF;
+        }
+
+        .nav-tabs li a {
+            color: #777;
+        }
+
+        .round-button {
+            color: #fff;
+            background: transparent;
+            border-color: #fff;
+            border-radius: 40px;
+        }
+
+        .round-button-dark {
+            color: #174D3E;
+            background: transparent;
+            border-color: #174D3E;
+            border-radius: 40px;
+        }
+
+        .signup-button {
+            color: #174D3E !important;
+            background: transparent !important;
+            border-color: #174D3E !important;
+            border-radius: 40px;
+        }
+
+        .questionforum-border {
+            height: 200px;
+        }
+
+        .tutor-border {
+            padding-top: 2%;
+            padding-bottom: 2%;
+            line-height: 60px;
+        }
+
+        .bg-pathway {
+            background: #F8B195;
+        }
+
+        .bg-todo {
+            background: #c07c84;
+        }
+
+        .bg-resource {
+            background: #6c5b7b;
+        }
+        .bg-modal{
+            padding-top: 2%;
+            padding-bottom: 5%;
+        }
+
+        .search-bar {
+            font-size: 20px;
+        }
+
+        .search-bar-bg {
+            padding-top: 5%;
+            padding-bottom: 5%;
+            background: #B8D2BF !important;
+        }
+
+        .atag {
+            text-decoration: none;
+        }
+
+        .atag:visited:hover {
+            color: white;
+        }
+        .navbar-space{
+            background:transparent;
+        }
+        .resource-title{
+            color: #fff;
+        }
+        .goal-title{
+            color: #fff;
+        }
+        .goal-border{
+            margin-top: 5%;
+        }
+        .big-checkbox{
+            width: 30px;
+            height: 30px;
+        }
+        h1{
+            font-size: 100px;
+        }
+        .intro{
+            padding-left: 15%;
+            padding-right: 15%;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavBar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="/static/img/METlogo.png" width="30" height="30"
+                        class="img-circle"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="NavBar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#design">Design Courses</a></li>
+                    <li><a href="#tutor">Question Forum</a></li>
+                    <li><a href="#take">Take Courses</a></li>
+                    <li><a href="#message">Message Tutors</a></li>
+                    <li><a href="#space" data-toggle="modal" data-target="#myModal">Your Space</a></li>
+                    <li><a href="/logout">logout</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid title text-center container-fluid-title" id="#home">
+        <h1>EdTutor</h1><br><hr><br>
+        <h3 class="intro">an all-in-one learning platform that incorporates online courses, question-and-answer forum, customizable study planner, and other student services!</h3>
+    </div>
+    <div class="container text-center tutor">
+        <br>
+        <div class="row">
+            <h3>Recommended Tutors</h3><br><br><hr>
+            <div class="col-sm-4">
+                <a href="#tutor1" data-toggle="collapse">
+                    <img src="/static/img/tutor1.webp" alt="tutor 1" width="255" height="255" class="img-circle person">
+                </a>
+                <div id="tutor1" class="collapse">
+                    <p>tutor1 introduction</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <a href="#tutor2" data-toggle="collapse">
+                    <img src="/static/img/tutor2.webp" alt="tutor 1" width="255" height="255" class="img-circle person">
+                </a>
+                <div id="tutor2" class="collapse">
+                    <p>tutor2 introduction</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <a href="#tutor3" data-toggle="collapse">
+                    <img src="/static/img/tutor3.jpg" alt="tutor 1" width="255" height="255" class="img-circle person">
+                </a>
+                <div id="tutor3" class="collapse">
+                    <p>tutor3 introduction</p>
+                </div>
+            </div>
         </div>
     </div>
-    <center>
-    <div class="text">
-        <h1>Welcome to _____ !</h1>
-        <h3>Enter your account below.<h3/>
+    <div class="container-fluid search-bar-bg">
+        <div class="search-box">
+            <div class="col-lg-10">
+                <input type="search" class="form-control search-bar" placeholder="search your question on the internet">
+            </div>
+            <div class="col-lg-2">
+                <select class="form-select form-select-lg mb-3 selectpicker">
+                    <option selected>search engine: </option>
+                    <option value="1">Google</option>
+                    <option value="2">Bing</option>
+                    <option value="3">Yahoo</option>
+                </select>
+            </div>
+        </div>
     </div>
-    <div class="buttons">
-        <button class="b1">Login</button>
-        <button class-"b2">Sign Up</button>
+    <br>
+    <div id="design" class="container-fluid">
+        <div class="design_bg">
+            <div class="container-fluid text-center tutor-border">
+                <div class="row">
+                    <h3><strong>Share Your Knowledge</strong></h3>
+                    <p><strong>Design a course and upload your own instructional videos.</strong></p>
+                    <button class="btn btn-default btn-lg round-button"><a class="atag"
+                            href="/designCourse">Upload</a></button>
+                    <p> </p>
+                </div>
+            </div>
+        </div>
     </div>
-    </center>
-  </body>
+    <div id="tutor" class="container-fluid container-fluid-spec">
+        <hr>
+        <h3>Share your expertise</h3>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#unanswered">Unanswered questions</a></li>
+            <li><a data-toggle="tab" href="#answered">Answered questions</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="unanswered" class="tab-pane fade in active">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-question">User 1</div>
+                        <div class="panel-body">question 1
+                            <button class="btn btn-sm pull-right round-button-dark" type="submit">Answer</button>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-question">User 2</div>
+                        <div class="panel-body">question 2
+                            <button class="btn btn-sm pull-right round-button-dark" type="submit">Answer</button>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-question">User 3</div>
+                        <div class="panel-body">question 3
+                            <button class="btn btn-sm pull-right round-button-dark" type="submit">Answer</button>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-question">User 4</div>
+                        <div class="panel-body">question 4
+                            <button class="btn btn-sm pull-right round-button-dark" type="submit">Answer</button>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-question">User 5</div>
+                        <div class="panel-body">question 5
+                            <button class="btn btn-sm pull-right round-button-dark" type="submit">Answer</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-11 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Post your question here"
+                            type="text" required>
+                    </div>
+                    <button class="btn pull-left round-button-dark" type="submit">Post</button>
+                </div>
+            </div>
+            <div id="answered" class="tab-pane fade">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-question">Question 1</div>
+                        <div class="panel-body">Answer to Question 1</div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-question">Question 2</div>
+                        <div class="panel-body">Answer to Question 2</div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-question">Question 3</div>
+                        <div class="panel-body">Answer to Question 3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="take" class="container-fluid take-bg container-fluid-spec2"><br>
+        <h2 class="text-center">Take a Course</h2><br><br>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h3>Algebra II</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>course description</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h4>$14.99/hr</h4>
+                        <h4>tutor #1</h4>
+                        <button class="btn btn-lg signup-button border-5">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h3>World History</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>course description</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h4>$17.99/hr</h4>
+                        <h4>tutor #2</h4>
+                        <button class="btn btn-lg signup-button">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h3>Intro to Physics</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>course description</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h4>$11.49/hr</h4>
+                        <h4>tutor #3</h4>
+                        <button class="btn btn-lg signup-button">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h3>Advanced Programming</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>course description</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h4>FREE</h4>
+                        <h4>tutor #4</h4>
+                        <button class="btn btn-lg signup-button">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h3>Gr12 Chemistry</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>course description</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h4>$23/hr</h4>
+                        <h4>tutor #5</h4>
+                        <button class="btn btn-lg signup-button">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default text-center">
+                    <div class="panel-heading">
+                        <h3>Gr10 Biology</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>course description</p>
+                    </div>
+                    <div class="panel-footer">
+                        <h4>$12.99/hr</h4>
+                        <h4>tutor #6</h4>
+                        <button class="btn btn-lg signup-button">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><hr>
+    <div id="message" class="container">
+        <h3>Ask tutor questions at any time!</h3>
+        <div class="row">
+            <div class="col-sm-2 form-group">
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="col-sm-5">
+                <input class="form-control" id="email" name="email" placeholder="Tutor Email" type="email">
+            </div>
+            <div class="col-sm-5">
+                <select class="form-select form-select-lg mb-3 selectpicker">
+                    <option selected>Or select from saved tutors.</option>
+                    <option value="1">tutor 1</option>
+                    <option value="2">tutor 2</option>
+                    <option value="3">tutor 3</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-11">
+                <textarea class="form-control" id="question" name="question" placeholder="Type your question here"
+                    rows="5"></textarea>
+            </div>
+            <div class="col-sm-1">
+                <h3 class="text-center">or</h3>
+                <button class="btn round-button-dark pull-left btn-lg">Upload file</button>
+            </div>
+        </div><br>
+        <div class="row">
+            <button class="btn center-block round-button-dark btn-block btn-lg" type="submit">Send</button>
+        </div>
+        <br><br>
+    </div>
+    </div>
+
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title text-center">Learning Space</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid goal bg-pathway bg-modal goal-title">
+                        <br><h4>Set your learning pathway</h4>
+                        <div class="row text-center goal-border">
+                            <hr>
+                            <div class="col-sm-2">
+                                <p><strong>today</strong></p>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" id="url" name="url" placeholder="your goal..." type="text"
+                                    required>
+                            </div>
+                            <div class="col-sm-2s">
+                                <button type="submit" class="btn round-button">add</button>
+                            </div>
+                        </div>
+                        <div class="row text-center goal-border">
+                            <div class="col-sm-2">
+                                <p><strong>this week</strong></p>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" id="url" name="url" placeholder="your goal..." type="text"
+                                    required>
+                            </div>
+                            <div class="col-sm-2s">
+                                <button type="submit" class="btn round-button">add</button>
+                            </div>
+                        </div>
+                        <div class="row text-center goal-border">
+                            <div class="col-sm-2">
+                                <p><strong>this month</strong></p>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" id="url" name="url" placeholder="your goal..." type="text"
+                                    required>
+                            </div>
+                            <div class="col-sm-2s">
+                                <button type="submit" class="btn round-button">add</button>
+                            </div>
+                        </div>
+                        <div class="row text-center goal-border">
+                            <div class="col-sm-2">
+                                <p><strong>this week</strong></p>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" id="url" name="url" placeholder="your goal..." type="text"
+                                    required>
+                            </div>
+                            <div class="col-sm-2s">
+                                <button type="submit" class="btn round-button">add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container-fluid todo bg-todo resource-title bg-todo bg-modal">
+                        <h4>To-do</h4>
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <input class="form-control" id="url" name="url" placeholder="what do you want to do today..." type="text"
+                                    required>
+                            </div>
+                            <div class="col-sm-2s">
+                                <button type="submit" class="btn round-button">add</button>
+                            </div>
+                        </div>
+                        <hr>
+                        
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <p>1. finish math homework</p>
+                            </div>
+                            <div class="pull-left">
+                                <div class="form-check">
+                                    <input class="form-check-input big-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <p>2. reading 30min</p>
+                            </div>
+                            <div class="pull-left">
+                                <div class="form-check">
+                                    <input class="form-check-input big-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <p>3. badminton practice</p>
+                            </div>
+                            <div class="pull-left">
+                                <div class="form-check">
+                                    <input class="form-check-input big-checkbox" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container-fluid resources bg-resource bg-modal">
+                        <h4 class="resource-title">Resource collection</h4>
+                        <div class="row">
+                            <div class="col-sm-2 form-group">
+                                <input class="form-control" id="label" name="label" placeholder="Label" type="text"
+                                    required>
+                            </div>
+                            <div class="col-sm-8">
+                                <input class="form-control" id="url" name="url" placeholder="website url" type="text"
+                                    required>
+                            </div>
+                            <div class="col-sm-2">
+                                <button type="submit" class="btn round-button">add</button>
+                            </div>
+                        </div>
+                        <h4 class="text-center resource-title">Studying</h4>
+                        <div class="navbar navbar-space">
+                            <div class="container-fluid">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="http://google.com" target="_blank">google</a></li>
+                                    <li><a href="https://www.coursera.org" target="_blank">cousera</a></li>
+                                    <li><a href="http://youtube.com" target="_blank">youtube</a></li>
+                                    <li><a href="http://techacks.us.com" target="_blank">techacks</a></li>
+                                    <li><a href="https://www.wikipedia.org" target="_blank">wiki</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h4 class="text-center resource-title">Entertainment</h4>
+                        <div class="navbar navbar-space">
+                            <div class="container-fluid">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="https://hooooooooo.com" target="_blank">useless 1</a></li>
+                                    <li><a href="https://heeeeeeeey.com" target="_blank">useless 2</a></li>
+                                    <li><a href="https://theuselessweb.com" target="_blank">ultimate useless</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
 </html>
